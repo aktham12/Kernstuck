@@ -1,0 +1,3 @@
+[submodule "Kernstuck/vendor/spdlog"]
+	path = Kernstuck/vendor/spdlog
+	url = https://github.com/gabime/spdlog
