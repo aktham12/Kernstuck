@@ -1,4 +1,6 @@
-#pragma once
+#ifndef KERNSTUCK_APPLICATION_H
+#define KERNSTUCK_APPLICATION_H
+
 #include "Core.h"
 namespace Kernstuck
 {
@@ -15,4 +17,5 @@ namespace Kernstuck
 	};
 	KernstucApllication* CreateApplication();
 }
+#endif // KERNSTUCK_APPLICATION_H
 

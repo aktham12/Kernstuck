@@ -19,6 +19,7 @@
     <ClInclude Include="src\Kernstuck\Logger.h">
       <Filter>Kernstuck</Filter>
     </ClInclude>
+    <ClInclude Include="src\Kernstuck\Events\Event.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="src\Kernstuck\KernstucApllication.cpp">

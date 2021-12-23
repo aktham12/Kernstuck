@@ -1,5 +1,6 @@
-#pragma once
-#include "KernstucApllication.h"
+#ifndef ENTRY_POINT_H
+#define ENTRY_POINT_H
+#include "KernstucApllication.h"	
 
 #ifdef KS_PLATFORM_WINDOWS
 
@@ -10,10 +11,11 @@ extern Kernstuck::KernstucApllication* Kernstuck::CreateApplication();
 		Kernstuck::Logger::Init();
 		KS_CORE_TRACE("init everyThing");
 		KS_CORE_INFO("hELLO! Var={0}", 5);
-	
+
 
 		auto app = new Kernstuck::KernstucApllication();
 		app->Run();
 		delete app;
 	}
-#endif
+#endif //KS_PLATFORM_WINDOWS
+#endif //ENTRY_POINT_H

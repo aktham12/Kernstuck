@@ -1,4 +1,7 @@
-#pragma once
+#ifndef LOGGER_H
+#define LOGGER_h
+
+
 #include "Core.h"
 #include "spdlog/spdlog.h"
 #include "spdlog/sinks/stdout_color_sinks.h"
@@ -37,3 +40,4 @@ namespace Kernstuck
 #define KS_CLIENT_FATAL(...)    ::Kernstuck::Logger::getClientLogger->fatal(__VA_ARGS__)
 
 
+#endif // !LOGGER_H
