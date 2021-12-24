@@ -10,7 +10,7 @@ namespace Kernstuck
 		KernstuckApplication();
 		virtual ~KernstuckApplication();
 
-		auto static run() ->void;
+		auto static run() -> void;
 
 		// define this in the client
 		

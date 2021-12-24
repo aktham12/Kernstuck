@@ -5,7 +5,7 @@ namespace Kernstuck
 	std::shared_ptr<spdlog::logger> Logger::s_CoreLogger;
 	std::shared_ptr<spdlog::logger> Logger::s_ClientLogger;
 
-	auto  Logger::init() ->void
+	[[ noreturn ]] auto  Logger::init() ->void
 	{
 		spdlog::set_pattern("%^[%T] %n: %v%$");
 		s_CoreLogger = spdlog::stdout_color_mt("KernStuck");
