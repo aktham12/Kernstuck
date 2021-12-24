@@ -13,16 +13,19 @@
     <ClInclude Include="src\Kernstuck\EntryPoint.h">
       <Filter>Kernstuck</Filter>
     </ClInclude>
-    <ClInclude Include="src\Kernstuck\KernstucApllication.h">
+    <ClInclude Include="src\Kernstuck\KernstuckApplication.h">
       <Filter>Kernstuck</Filter>
     </ClInclude>
     <ClInclude Include="src\Kernstuck\Logger.h">
       <Filter>Kernstuck</Filter>
     </ClInclude>
     <ClInclude Include="src\Kernstuck\Events\Event.h" />
+    <ClInclude Include="src\Kernstuck\Events\ApplicationEvent.h" />
+    <ClInclude Include="src\Kernstuck\Events\KeyEvent.h" />
+    <ClInclude Include="src\Kernstuck\Events\MouseEvent.h" />
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="src\Kernstuck\KernstucApllication.cpp">
+    <ClCompile Include="src\Kernstuck\KernstuckApplication.cpp">
       <Filter>Kernstuck</Filter>
     </ClCompile>
     <ClCompile Include="src\Kernstuck\Logger.cpp">

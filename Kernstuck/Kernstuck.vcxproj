@@ -26,19 +26,19 @@
     <ConfigurationType>DynamicLibrary</ConfigurationType>
     <UseDebugLibraries>true</UseDebugLibraries>
     <CharacterSet>Unicode</CharacterSet>
-    <PlatformToolset>v142</PlatformToolset>
+    <PlatformToolset>v143</PlatformToolset>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
     <ConfigurationType>DynamicLibrary</ConfigurationType>
     <UseDebugLibraries>false</UseDebugLibraries>
     <CharacterSet>Unicode</CharacterSet>
-    <PlatformToolset>v142</PlatformToolset>
+    <PlatformToolset>v143</PlatformToolset>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Dist|x64'" Label="Configuration">
     <ConfigurationType>DynamicLibrary</ConfigurationType>
     <UseDebugLibraries>false</UseDebugLibraries>
     <CharacterSet>Unicode</CharacterSet>
-    <PlatformToolset>v142</PlatformToolset>
+    <PlatformToolset>v143</PlatformToolset>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
   <ImportGroup Label="ExtensionSettings">
@@ -146,12 +146,15 @@
     <ClInclude Include="src\Kernstuck.h" />
     <ClInclude Include="src\Kernstuck\Core.h" />
     <ClInclude Include="src\Kernstuck\EntryPoint.h" />
+    <ClInclude Include="src\Kernstuck\Events\ApplicationEvent.h" />
     <ClInclude Include="src\Kernstuck\Events\Event.h" />
-    <ClInclude Include="src\Kernstuck\KernstucApllication.h" />
+    <ClInclude Include="src\Kernstuck\Events\KeyEvent.h" />
+    <ClInclude Include="src\Kernstuck\Events\MouseEvent.h" />
+    <ClInclude Include="src\Kernstuck\KernstuckApplication.h" />
     <ClInclude Include="src\Kernstuck\Logger.h" />
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="src\Kernstuck\KernstucApllication.cpp" />
+    <ClCompile Include="src\Kernstuck\KernstuckApplication.cpp" />
     <ClCompile Include="src\Kernstuck\Logger.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />

@@ -1,8 +1,0 @@
-﻿  KernstucApllication.cpp
-  Logger.cpp
-E:\dev\C++Dev\AHA\Kernstuck\Kernstuck\src\Kernstuck\Logger.h(20,54): warning C4251: 'Kernstuck::Logger::s_CoreLogger': class 'std::shared_ptr<spdlog::logger>' needs to have dll-interface to be used by clients of class 'Kernstuck::Logger'
-E:\dev\C++Dev\AHA\Kernstuck\Kernstuck\vendor\spdlog\include\spdlog\details\registry.h(34): message : see declaration of 'std::shared_ptr<spdlog::logger>'
-E:\dev\C++Dev\AHA\Kernstuck\Kernstuck\src\Kernstuck\Logger.h(21,56): warning C4251: 'Kernstuck::Logger::s_ClientLogger': class 'std::shared_ptr<spdlog::logger>' needs to have dll-interface to be used by clients of class 'Kernstuck::Logger'
-E:\dev\C++Dev\AHA\Kernstuck\Kernstuck\vendor\spdlog\include\spdlog\details\registry.h(34): message : see declaration of 'std::shared_ptr<spdlog::logger>'
-  Generating Code...
-  Kernstuck.vcxproj -> E:\dev\C++Dev\AHA\Kernstuck\Kernstuck\..\bin\Debug-windows-x86_64\Kernstuck\Kernstuck.dll

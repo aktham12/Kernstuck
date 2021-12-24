@@ -5,7 +5,7 @@
 
 // for use by Kernstuck applications
 
-#include "Kernstuck/KernstucApllication.h"
+#include "Kernstuck/KernstuckApplication.h"
 #include "Kernstuck/Logger.h"
 
 // ----------Entry Point-------------

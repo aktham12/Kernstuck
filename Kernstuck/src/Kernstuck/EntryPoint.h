@@ -1,20 +1,19 @@
 #ifndef ENTRY_POINT_H
 #define ENTRY_POINT_H
-#include "KernstucApllication.h"	
+#include "KernstuckApplication.h"	
 
 #ifdef KS_PLATFORM_WINDOWS
 
-extern Kernstuck::KernstucApllication* Kernstuck::CreateApplication();
+extern Kernstuck::KernstuckApplication* Kernstuck::CreateApplication();
 	int main(int argc, char** argv)
 	{
 
-		Kernstuck::Logger::Init();
-		KS_CORE_TRACE("init everyThing");
-		KS_CORE_INFO("hELLO! Var={0}", 5);
+		Kernstuck::Logger::init();
+		KS_CORE_INFO("The Logger Is Working!");
 
 
-		auto app = new Kernstuck::KernstucApllication();
-		app->Run();
+		const auto app = new Kernstuck::KernstuckApplication();
+		app->run();
 		delete app;
 	}
 #endif //KS_PLATFORM_WINDOWS

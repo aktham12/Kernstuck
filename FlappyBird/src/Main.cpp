@@ -1,6 +1,6 @@
 #include "Kernstuck.h"
 
-class Application : public Kernstuck::KernstucApllication
+class Application : public Kernstuck::KernstuckApplication
 {
 public:
 	Application()
@@ -16,7 +16,7 @@ public:
 
 };
 
-Kernstuck::KernstucApllication* Kernstuck::CreateApplication()
+Kernstuck::KernstuckApplication* Kernstuck::CreateApplication()
 {
 	return new Application();
 }

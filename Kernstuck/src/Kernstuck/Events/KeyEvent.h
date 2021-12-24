@@ -1,5 +1,5 @@
-#ifndef KEY_EVENT_h
-#define  KEY_EVENT_h
+#ifndef  KEY_EVENT_H
+#define  KEY_EVENT_H
 
 #include "Event.h"
 
@@ -10,10 +10,10 @@ namespace Kernstuck
 	class KS_API KeyEvent : public Event
 	{
 	public:
-		inline int GetKeyCode() const { return m_KeyCode; }
+		[[nodiscard]] inline int getKeyCode() const { return m_KeyCode; }
 		EVENT_CLASS_CATEGORY(EventCategoryKeyboard | EventCategoryInput)
 	protected:
-		KeyEvent(int KeyCode)
+		KeyEvent(const int KeyCode)
 			: m_KeyCode(KeyCode)
 		{
 		}
@@ -24,12 +24,12 @@ namespace Kernstuck
 	class KS_API KeyPressedEvent : public KeyEvent
 	{
 	public:
-		KeyPressedEvent(int KeyCode, int RepeatCount)
-			: KeyEven(KeyCode), m_RepeatCount(RepeatCount)
+		KeyPressedEvent(const int KeyCode,const int RepeatCount)
+			: KeyEvent(KeyCode), m_RepeatCount(RepeatCount)
 		{
 		}
-		inline int GetReatCount() const { return m_RepeatCount; }
-		std::string ToString() const override
+		[[nodiscard]]  inline int getRepeatCount() const { return m_RepeatCount; }
+		[[nodiscard]]  std::string toString() const override
 		{
 			std::stringstream ss;
 			ss << "KeyPressedEvent: " << m_KeyCode << " (" << m_RepeatCount << " repeats)";
@@ -48,15 +48,15 @@ namespace Kernstuck
 	class KS_API KeyReleasedEvent : public KeyEvent
 	{
 	public:
-		KeyReleasedEvent(int keycode)
+		KeyReleasedEvent( const int keycode)
 			: KeyEvent(keycode) {}
 
-		std::string ToString() const override
-		{
-			std::stringstream ss;
-			ss << "KeyReleasedEvent: " << m_KeyCode;
-			return ss.str();
-		}
+		[[nodiscard]] std::string toString() const override
+			{
+				std::stringstream ss;
+				ss << "KeyReleasedEvent: " << m_KeyCode;
+				return ss.str();
+			}
 
 		EVENT_CLASS_TYPE(KeyReleased)
 	};

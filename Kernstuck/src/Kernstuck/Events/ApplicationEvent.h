@@ -1,23 +1,23 @@
 #ifndef APPLICATION_EVENT_H
 #define APPLICATION_EVENT_H
 
+#include <sstream>
+
 #include "Event.h"
-
-
-
+#include "string"
 namespace Kernstuck
 {
 	class KS_API WindowResizeEvent : public Event
 	{
 	public:
-		WindowResizeEvent(unsigned int width, unsigned int height)
-			: m_Width(width), m_Heigth(height) 
+		WindowResizeEvent(const unsigned int width, const unsigned int height)
+			: m_Width(width), m_Height(height)
 		{
 		}
-		inline unsigned int GetWidth() const  { return m_Width; }
-		inline unsigned int GetHeigth() const { return m_Height; }
+		[[nodiscard]] inline unsigned int getWidth() const  { return m_Width; }
+		[[nodiscard]]  inline unsigned int getHeight() const { return m_Height; }
 
-		std::string ToString() const override
+		[[nodiscard]]std::string toString() const override
 		{
 			std::stringstream ss;
 			ss << "WindowResizeEvent: " << m_Width << ", " << m_Height;

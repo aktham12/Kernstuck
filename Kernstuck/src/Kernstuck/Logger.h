@@ -1,20 +1,21 @@
 #ifndef LOGGER_H
-#define LOGGER_h
+#define LOGGER_H
 
 
 #include "Core.h"
 #include "spdlog/spdlog.h"
 #include "spdlog/sinks/stdout_color_sinks.h"
 #include <memory>
+#include <iostream>
 namespace Kernstuck
 {
 	class KS_API Logger
 	{
 	public:
-		static void Init();
+		static auto init() -> void;
 
-		inline static std::shared_ptr<spdlog::logger>& getCoreLogger() { return s_CoreLogger; }
-		inline static std::shared_ptr<spdlog::logger>& getClientLogger() { return s_ClientLogger; }
+		inline static auto getCoreLogger() ->std::shared_ptr<spdlog::logger>& { return s_CoreLogger; }
+		inline static auto getClientLogger()->std::shared_ptr<spdlog::logger>& { return s_ClientLogger; }
 
 	private:
 		static std::shared_ptr<spdlog::logger> s_CoreLogger;

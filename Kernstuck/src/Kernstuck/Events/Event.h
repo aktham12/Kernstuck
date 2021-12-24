@@ -4,6 +4,7 @@
 #include "../../Kernstuck/Core.h"
 
 #include <string>
+
 #include <functional>
 
 namespace Kernstuck
@@ -16,7 +17,7 @@ namespace Kernstuck
 		KeyPressed, KeyReleased,
 		MouseButtonPressed, MouseButtonReleased, MouseMoved, MouseScrolled
 	};
-	enum EventCategory
+	enum  EventCategory
 	{
 		None = 0,
 		EventCategoryApplication = BIT(0),
@@ -26,11 +27,11 @@ namespace Kernstuck
 		EventCategoryMouseButton = BIT(4)
 	};
 
-#define EVENT_CLASS_TYPE(type) static EventType GetStaticType() { return EventType::##type; }\
-								virtual EventType GetEventType() const override { return GetStaticType(); }\
-								virtual const char* GetName() const override { return #type; }
+#define EVENT_CLASS_TYPE(type)  static EventType        getStaticType()					 { return EventType::##type; }\
+								virtual  EventType      getEventType()	 const override  { return getStaticType(); }\
+								virtual  const char*    getName()		 const override	 { return #type; }
 
-#define EVENT_CLASS_CATEGORY(category) virtual int GetCategoryFlags() const override { return category; }
+#define EVENT_CLASS_CATEGORY(category) virtual inline int getCategoryFlags() const override { return category; }
 
 
 
@@ -38,16 +39,18 @@ namespace Kernstuck
 	{
 		friend class EventDispatcher;
 	public:
-		virtual EventType GetEventType()  const = 0;
-		virtual const char* GetName()     const = 0;
-		virtual int GetCategoryFlags()    const = 0;
-		virtual std::string ToString() const { return GetName(); }
+		[[nodiscard]] virtual EventType getEventType()  const = 0;
+		[[nodiscard]] virtual const char* getName()     const = 0;
+		[[nodiscard]] virtual int getCategoryFlags()    const = 0;
+		[[nodiscard]] virtual std::string toString() const { return getName(); }
 
-		inline bool IsInCategory(EventCategory& category)
+		[[nodiscard]] inline auto isInCategory(const EventCategory& category) const -> bool
 		{
-			return GetCategoryFlags() & category;
+			return getCategoryFlags() & category;
 		}
+		
 	protected:
+		~Event() = default;
 		bool m_Handled = false;
 
 	};
@@ -63,9 +66,9 @@ namespace Kernstuck
 		}
 
 		template<typename T>
-		bool Dispatch(EventFn<T> func)
+		auto dispatch(EventFn<T> func)->bool
 		{
-			if (m_Event.GetEventType) == T::GetStaticType()
+			if (m_Event.getEventType() == T::getStaticType())
 			{
 				m_Event.m_Handled = func(*(T*)m_Event);
 				return true;
@@ -77,9 +80,10 @@ namespace Kernstuck
 		Event& m_Event;
 		
 	};
+
 	inline std::ostream& operator<<(std::ostream& os, const Event& e)
 	{
-		return os << e.ToString();
+		return os << e.toString();
 	}
 
 }
