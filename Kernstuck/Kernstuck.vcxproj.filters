@@ -4,6 +4,9 @@
     <Filter Include="Kernstuck">
       <UniqueIdentifier>{9FC2F398-0B2D-A80F-546B-59B5C0148664}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Kernstuck\Events">
+      <UniqueIdentifier>{A3653E15-8F5E-5D67-B890-42ECA4E83C73}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="src\Kernstuck.h" />
@@ -13,16 +16,25 @@
     <ClInclude Include="src\Kernstuck\EntryPoint.h">
       <Filter>Kernstuck</Filter>
     </ClInclude>
+    <ClInclude Include="src\Kernstuck\Events\ApplicationEvent.h">
+      <Filter>Kernstuck\Events</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Kernstuck\Events\Event.h">
+      <Filter>Kernstuck\Events</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Kernstuck\Events\KeyEvent.h">
+      <Filter>Kernstuck\Events</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Kernstuck\Events\MouseEvent.h">
+      <Filter>Kernstuck\Events</Filter>
+    </ClInclude>
     <ClInclude Include="src\Kernstuck\KernstuckApplication.h">
       <Filter>Kernstuck</Filter>
     </ClInclude>
     <ClInclude Include="src\Kernstuck\Logger.h">
       <Filter>Kernstuck</Filter>
     </ClInclude>
-    <ClInclude Include="src\Kernstuck\Events\Event.h" />
-    <ClInclude Include="src\Kernstuck\Events\ApplicationEvent.h" />
-    <ClInclude Include="src\Kernstuck\Events\KeyEvent.h" />
-    <ClInclude Include="src\Kernstuck\Events\MouseEvent.h" />
+    <ClInclude Include="src\khpc.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="src\Kernstuck\KernstuckApplication.cpp">
@@ -31,5 +43,6 @@
     <ClCompile Include="src\Kernstuck\Logger.cpp">
       <Filter>Kernstuck</Filter>
     </ClCompile>
+    <ClCompile Include="src\khpc.cpp" />
   </ItemGroup>
 </Project>

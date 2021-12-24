@@ -1,4 +1,4 @@
-
+#include "khpc.h"
 
 #include "KernstuckApplication.h"
 

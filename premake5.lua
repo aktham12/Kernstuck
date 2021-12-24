@@ -17,6 +17,8 @@ project "Kernstuck"
     targetdir ("bin/" .. outputdir .. "/%{prj.name}")
     objdir ("bin-int/" .. outputdir .. "/%{prj.name}")
 
+    pchheader "khpc.h"
+    pchsource "Kernstuck/src/khpc.cpp"
     files
     {
         "%{prj.name}/src/**.h",

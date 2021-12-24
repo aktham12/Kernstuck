@@ -1,11 +1,11 @@
 #ifndef EVENT_H
 #define EVENT_H
 
-#include "../../Kernstuck/Core.h"
+#include "khpc.h"
 
-#include <string>
+#include "Kernstuck/Core.h"
 
-#include <functional>
+
 
 namespace Kernstuck
 {

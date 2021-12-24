@@ -1,9 +1,10 @@
 #ifndef  KEY_EVENT_H
 #define  KEY_EVENT_H
 
+#include "khpc.h"
+
 #include "Event.h"
 
-#include <sstream>
 
 namespace Kernstuck
 {

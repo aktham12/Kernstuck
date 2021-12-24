@@ -8,7 +8,7 @@
 		#else
 			#define KS_API __declspec(dllimport)
 
-		#endif // KS_BULID_DLL
+		#endif // KS_BUILD_DLL
 	#else
 	#error Kernstuck ONLY SUPPORT WINDOWS
 

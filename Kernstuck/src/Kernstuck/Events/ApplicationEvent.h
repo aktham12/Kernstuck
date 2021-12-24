@@ -1,10 +1,10 @@
 #ifndef APPLICATION_EVENT_H
 #define APPLICATION_EVENT_H
 
-#include <sstream>
+#include "khpc.h"
 
 #include "Event.h"
-#include "string"
+
 namespace Kernstuck
 {
 	class KS_API WindowResizeEvent : public Event

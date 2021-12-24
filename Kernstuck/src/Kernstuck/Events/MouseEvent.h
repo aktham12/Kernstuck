@@ -1,8 +1,10 @@
 #ifndef MOUSE_EVENT_H
 #define MOUSE_EVENT_H
+#include "khpc.h"
+
 #include "Event.h"
 
-#include <sstream>
+
 
 namespace Kernstuck {
 
@@ -10,7 +12,10 @@ namespace Kernstuck {
 	{
 	public:
 		MouseMovedEvent(const float x, const float y)
-			: m_MouseX(x), m_MouseY(y) {}
+			: m_MouseX(x), m_MouseY(y)
+		{
+			
+		}
 
 		[[nodiscard]] inline float getX() const { return m_MouseX; }
 		[[nodiscard]] inline float getY() const { return m_MouseY; }
@@ -97,5 +102,5 @@ namespace Kernstuck {
 
 }
 
-#endif // !MOUSE_EVENT_H
+#endif // MOUSE_EVENT_H
 
