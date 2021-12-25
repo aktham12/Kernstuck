@@ -1,3 +1,9 @@
 [submodule "Kernstuck/vendor/spdlog"]
 	path = Kernstuck/vendor/spdlog
 	url = https://github.com/gabime/spdlog
+[submodule "Kernstuck/vendor/GFLW"]
+	path = Kernstuck/vendor/GFLW
+	url = https://github.com/aktham12/glfw
+[submodule "Kernstuck/vendor/GLFW"]
+	path = Kernstuck/vendor/GLFW
+	url = https://github.com/TheCherno/GLFW

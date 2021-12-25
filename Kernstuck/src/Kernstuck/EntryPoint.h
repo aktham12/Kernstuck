@@ -1,6 +1,7 @@
 #ifndef ENTRY_POINT_H
 #define ENTRY_POINT_H
-#include "KernstuckApplication.h"	
+#include "KernstuckApplication.h"
+
 
 #ifdef KS_PLATFORM_WINDOWS
 

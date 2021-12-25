@@ -5,8 +5,7 @@
 #include "Core.h"
 #include "spdlog/spdlog.h"
 #include "spdlog/sinks/stdout_color_sinks.h"
-#include <memory>
-#include <iostream>
+
 namespace Kernstuck
 {
 	class KS_API Logger

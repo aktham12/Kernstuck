@@ -7,6 +7,9 @@
     <Filter Include="Kernstuck\Events">
       <UniqueIdentifier>{A3653E15-8F5E-5D67-B890-42ECA4E83C73}</UniqueIdentifier>
     </Filter>
+    <Filter Include="platform">
+      <UniqueIdentifier>{4A63C33C-3630-1E48-5F49-0CF04B7553D6}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="src\Kernstuck.h" />
@@ -34,7 +37,13 @@
     <ClInclude Include="src\Kernstuck\Logger.h">
       <Filter>Kernstuck</Filter>
     </ClInclude>
+    <ClInclude Include="src\Kernstuck\Window.h">
+      <Filter>Kernstuck</Filter>
+    </ClInclude>
     <ClInclude Include="src\khpc.h" />
+    <ClInclude Include="src\platform\WindowsWindow.h">
+      <Filter>platform</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="src\Kernstuck\KernstuckApplication.cpp">
@@ -44,5 +53,8 @@
       <Filter>Kernstuck</Filter>
     </ClCompile>
     <ClCompile Include="src\khpc.cpp" />
+    <ClCompile Include="src\platform\WindowsWindow.cpp">
+      <Filter>platform</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>

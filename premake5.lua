@@ -9,6 +9,11 @@ workspace "Kernstuck"
 
     outputdir = "%{cfg.buildcfg}-%{cfg.system}-%{cfg.architecture}"
 
+IncludeDir = {}
+IncludeDir["GLFW"] = "Kernstuck/vendor/GLFW/include"
+
+   include "Kernstuck/vendor/GLFW"
+
 project "Kernstuck"
     location "Kernstuck"
     kind "SharedLib"
@@ -27,8 +32,20 @@ project "Kernstuck"
 
     includedirs
     {
-        "%{prj.name}/vendor/spdlog/include"
+        "%{prj.name}/src",
+        "%{prj.name}/vendor/spdlog/include",
+		"%{IncludeDir.GLFW}"
     }
+	
+	links 
+	{ 
+	
+		
+		"Dwmapi.lib",
+
+		"GLFW",
+		"opengl32.lib"
+	}
 
     filter "system:windows"
         cppdialect "C++17"
