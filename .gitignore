@@ -1,8 +1,10 @@
+
 # Directories
 .vs/
 bin/
 binint/
 Ven/
+glfw/
 
 # Files
 *.user
