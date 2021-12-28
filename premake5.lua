@@ -20,7 +20,7 @@ project "Kernstuck"
     language "C++"
 
     targetdir ("bin/" .. outputdir .. "/%{prj.name}")
-    objdir ("bin-int/" .. outputdir .. "/%{prj.name}")
+    objdir ("binint/" .. outputdir .. "/%{prj.name}")
 
     pchheader "khpc.h"
     pchsource "Kernstuck/src/khpc.cpp"
@@ -82,7 +82,7 @@ project "FlappyBird"
         language "C++"
 
         targetdir ("bin/" .. outputdir .. "/%{prj.name}")
-        objdir ("bin-int/" .. outputdir .. "/%{prj.name}")
+        objdir ("binint/" .. outputdir .. "/%{prj.name}")
 
         files
         {
