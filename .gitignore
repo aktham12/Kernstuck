@@ -1,0 +1,12 @@
+bin/
+bin-init/
+binint/
+**/bin/
+**/bin-init/
+
+
+.vs/
+**.sln
+**.vcxproj
+**.vcxproj.filters
+**.vcxproj.user

@@ -34,6 +34,12 @@ namespace Kernstuck
 		virtual void onUpdate() = 0;
 		[[nodiscard]] virtual auto getWidth() const  -> unsigned int = 0;
 		[[nodiscard]] virtual auto getHeight() const -> unsigned int = 0;
+		virtual auto setWindowResizeEvent() const -> void = 0;
+		virtual auto setWindowCloseEvent() const -> void = 0;
+		virtual auto setKeyboardEvent() const -> void = 0;
+		virtual auto setMouseEvent() const -> void = 0;
+		virtual auto setMouseScrollEvent() const -> void = 0;
+		virtual auto setCursorPosEvent() const -> void = 0;
 
 		virtual auto setEventCallback(const EventCallbackFn& callback) -> void = 0;
 		virtual auto setVSync(bool enabled) -> void = 0;

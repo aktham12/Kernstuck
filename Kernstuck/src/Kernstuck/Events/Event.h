@@ -17,7 +17,7 @@ namespace Kernstuck
 		KeyPressed, KeyReleased,
 		MouseButtonPressed, MouseButtonReleased, MouseMoved, MouseScrolled
 	};
-	enum  EventCategory
+	enum   EventCategory
 	{
 		None = 0,
 		EventCategoryApplication = BIT(0),
@@ -70,7 +70,7 @@ namespace Kernstuck
 		{
 			if (m_Event.getEventType() == T::getStaticType())
 			{
-				m_Event.m_Handled = func(*(T*)m_Event);
+				m_Event.m_Handled = func(*(T*)&m_Event);
 				return true;
 			}
 			return false;

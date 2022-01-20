@@ -7,6 +7,8 @@
 #include "Window.h"
 
 
+
+
 namespace Kernstuck
 {
 	class KS_API KernstuckApplication
@@ -16,6 +18,8 @@ namespace Kernstuck
 		virtual ~KernstuckApplication();
 
 		auto  run() -> void;
+		auto onEvent(Event& event) -> void;
+
 
 		// define this in the client
 	private:

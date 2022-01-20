@@ -1,6 +1,5 @@
 #include "khpc.h"
 
-#include "Logger.h"
 
 namespace Kernstuck
 {
